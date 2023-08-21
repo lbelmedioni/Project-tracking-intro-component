@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Karla:wght@400;700&family=Reem+Kufi:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+   /* max-width: 100%;*/
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    font-size: 18px ;
+    font-family: "Barlow", sans-serif ;
+    color: hsl(230, 29%, 20%);
+    background-color: #fff;
+    padding: 1.5rem;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+}
+
+h1,
+h2,
+li,
+.cta {
+    font-family: "Barlow Condensed", sans-serif;
+}
+p {
+    line-height: 1.8;
+}
+
+button {
+background-color: transparent;
+border: none;
+outline: none;
+cursor: pointer;
+}
+.bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-bottom-left-radius: 3rem;
+    background-color: hsl(207, 33%, 95%);
+    height: calc(50vh - 10px);
+    width: calc(50vw - 10px);
+    z-index: -1;
+}
+.header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+max-width: 1200px;
+margin: auto;
+}
+
+
+nav {
+    position: absolute;
+    top: -100vh;
+    background-color: #fff;
+    padding: 1.5rem;
+    width: 90%;
+    margin: auto;
+    border-radius: 0.625rem;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+nav.open {
+ top: 6rem;
+}
+
+ nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+ }
+
+ nav ul li a {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+ }
+
+ nav ul li:nth-child(4){
+    display:none;
+ }
+
+ nav ul li:last-child {
+    border-top: 1px solid hsl(207, 33%, 95%);
+    padding-top: 1rem;
+ }
+
+.close {
+    display: none;
+}
+
+ .showcase {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 4rem 0;
+ }
+
+ .showcase article:last-child img {
+    width: calc(125vw);
+
+ }
+ .showcase h2 {
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin: 6rem 0 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem ;
+    color: hsl(231, 7%, 65%);
+}
+
+ .showcase h2 span {
+background-color: hsl(230, 29%, 20%);
+color: #fff;
+padding: 0.2rem 0.8rem ;
+border-radius: 30px;
+letter-spacing: 0;
+ }
+
+ .showcase h1 {
+    font-size: 3rem;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+ }
+
+ .showcase p {
+    margin-bottom: 2rem;
+ }
+
+ .showcase .cta button {
+    background-color: hsl(0, 100%, 68%);
+    font-weight: bold;
+    padding: 0.625rem 2rem;
+    font-size: 1rem;
+    font-family: "Barlow  Condenced", sans-serif;
+    color: #fff;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+ }
+
+ .showcase .cta span {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: hsl(231, 7%, 65%);
+    letter-spacing: 0.3rem;
+    margin-left: 1rem;
+    
+ }
+ 
+.attribution {
+    font-size: 14px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228,45%,44%);
+}
+@media (min-width: 768px) {
+    nav {
+        position: relative;
+        top: 0;
+        background-color: transparent;
+        padding: 0;
+        width: auto;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+        transition: 0;
+    }
+    nav.open {
+        top: 0;
+    }
+    nav ul {
+        flex-direction: row;
+    }
+    nav ul li:nth-child(4){
+        display: block;
+        color: hsl(231, 7%, 65%);
+        font-size: 4rem;
+        line-height: 0.2;
+    }
+     nav ul li:last-child {
+        border-top: none;
+        padding-top: 0;
+        color: hsl(231, 7%, 65%);
+     }
+     #menu-button {
+        display: none;
+     }
+    .showcase {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 1200px;
+        margin: auto;
+        place-items: center;
+        padding: 6rem 0;
+    }
+    .showcase h1 {
+        font-size: 5rem;
+    }
+
+    .showcase article:last-child {
+        position:absolute;
+        right: -16rem;
+    }
+
+    .showcase article:last-child img {
+     width: auto;
+    }
+}
